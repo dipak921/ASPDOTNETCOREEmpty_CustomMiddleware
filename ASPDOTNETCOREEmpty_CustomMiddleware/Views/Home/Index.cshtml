@@ -39,7 +39,7 @@
     }
 } *@
 <br />
-<h4>ViewBag</h4>
+@* <h4>ViewBag</h4>
 @ViewBag.Message
 <br />
 @ViewBag.CurrentTime
@@ -51,4 +51,16 @@
     {
         <p>@item</p>
     }
-}
+} *@
+
+<h4>Temp Data</h4>
+@TempData["Message"]
+<br />
+
+<h4>View Bag</h4>
+@ViewBag.VBData
+<br />
+
+<h4>View Data</h4>
+@ViewData["VDData"]
+<br />

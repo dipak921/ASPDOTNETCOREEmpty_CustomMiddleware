@@ -22,11 +22,18 @@ namespace ASPDOTNETCOREEmpty_CustomMiddleware.Controllers
 
 
             // ********** view Bag ***********
-            ViewBag.Message = "Welcome to View Bag!";
-            ViewBag.CurrentTime = DateTime.Now.ToString("F");
-            ViewBag.Age = 30;
+            //ViewBag.Message = "Welcome to View Bag!";
+            //ViewBag.CurrentTime = DateTime.Now.ToString("F");
+            //ViewBag.Age = 30;
 
-            ViewBag.Array = new string[] { "ASP.NET Core", "MVC", "C#", "Programming" };
+            //ViewBag.Array = new string[] { "ASP.NET Core", "MVC", "C#", "Programming" };
+
+            // ********** TempData **********
+            TempData["Message"] = "Welcome to TempData!";
+            ViewBag.VBData = "This is ViewBag data from Index Action";
+            ViewData["VDData"] = "This is ViewData data from Index Action";
+
+
 
             return View();
         }
@@ -43,6 +50,10 @@ namespace ASPDOTNETCOREEmpty_CustomMiddleware.Controllers
 
         public IActionResult About()
         {
+            TempData["Message"] = "Welcome to TempData!";
+            ViewBag.VBData = "This is ViewBag data from Index Action";
+            ViewData["VDData"] = "This is ViewData data from Index Action";
+
             return View();
         }
 
