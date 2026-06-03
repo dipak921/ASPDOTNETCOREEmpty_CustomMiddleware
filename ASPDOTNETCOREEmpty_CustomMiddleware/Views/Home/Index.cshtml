@@ -2,9 +2,9 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    // Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+@* 
 <h1>Welcome to ASP.NET Core!</h1>
 <h2>This is Index Page.</h2>
 
@@ -17,4 +17,38 @@
 }
 
 <h3>Name : @name</h3>
-<h3>Name : @age</h3>
+<h3>Name : @age</h3> *@
+
+@* @ViewData["Message"]
+<br />
+@ViewData["CurrentTime"]
+<br />
+@ViewData["Age"]
+<br />
+@{
+    foreach (var item in (string[])ViewData["Array"])
+    {
+        <p>@item</p>
+    }
+}
+<br />
+@{
+    foreach (var item in (List<string>)ViewData["List"])
+    {
+        <p>@item</p>
+    }
+} *@
+<br />
+<h4>ViewBag</h4>
+@ViewBag.Message
+<br />
+@ViewBag.CurrentTime
+<br />
+@ViewBag.Age
+<br />
+@{
+    foreach (var item in (string[])ViewBag.Array)
+    {
+        <p>@item</p>
+    }
+}
